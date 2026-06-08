@@ -1,4 +1,4 @@
-# Devin Cloud 零基础完全教程
+# Devin Cloud 零基础教程
 
 > 从零开始，手把手教你使用 Devin Cloud 进行 AI 辅助开发和团队协作。
 > 本教程面向小白，细致到每一次鼠标点击。
