@@ -101,6 +101,14 @@
 - Slack / Teams / Jira / Linear 集成
 - Devin CLI、Handoff、Session Insights
 
+### [第十二章：团队管理与生产工作流](12-团队管理与生产工作流.md)（团队进阶）
+- 邀请成员、Member / Admin 与席位的区别
+- 导入本地 VS Code 设置、扩展和快捷键
+- Slack Auto-triage 自动调查与分流
+- Devin 的部署能力和限制
+- Autofix Bot Comments 白名单与防循环
+- 官方产品指南覆盖索引
+
 ---
 
 ## 快速开始（5 分钟版）
@@ -164,10 +172,12 @@
 | Skill | 仓库内可复用操作流程，常用于测试、部署、登录 |
 | MCP | 连接外部工具的协议，可接 Sentry、Datadog、Figma、数据库等 |
 | Automations | 按 Slack、GitHub、Linear、Webhook 等事件自动触发 Devin |
+| Auto-triage | 持续监听 Slack Bug 频道，自动去重、调查和分流问题 |
 | Scheduled Sessions | 按时间自动运行 Devin 任务 |
 | Session Insights | 会话复盘工具，用于分析 ACU、卡点和改进建议 |
 | Computer Use | Devin 使用浏览器/桌面进行 UI 操作、截图和录屏 |
 | Devin CLI | 在本地终端使用 Devin，并可 `/handoff` 交给云端 Devin |
+| Autofix Bot Comments | 控制 Devin 是否处理可信 PR 机器人的评论 |
 
 ---
 
@@ -198,4 +208,4 @@
 
 ---
 
-*本教程基于 Devin 官方文档编写，共 11 章，最后更新：2026年7月*
+*本教程基于 Devin 官方文档编写，共 12 章，最后更新：2026年7月*

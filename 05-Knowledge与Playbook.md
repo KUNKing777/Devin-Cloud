@@ -20,12 +20,12 @@ Devin 会在所有 session 中自动回忆相关的 Knowledge，不需要你每�
 
 #### 第一步：进入 Knowledge 页面
 
-1. 在左侧边栏点击 **Knowledge**
+1. 进入 **Settings & Library** → **Knowledge**
 2. 你会看到已有的知识条目列表
 
 #### 第二步：创建新条目
 
-1. 点击 **Add Knowledge** 按钮
+1. 点击右上角 **Create knowledge**
 2. 填写两个字段：
 
 **Trigger Description（触发描述）**
@@ -41,11 +41,12 @@ Devin 会在所有 session 中自动回忆相关的 Knowledge，不需要你每�
 3. 可选：设置 **Macro（宏）**
    - 一个快捷标识符，格式为 `!名称`
    - 例如：`!api-format`
-   - 以后在 prompt 中写 `@!api-format` 就能快速引用这条知识
+   - 以后在 prompt 中输入 `!api-format` 就能快速引用这条知识
+   - 宏只能包含字母、数字和连字符，并且在组织内不能重名
 
-4. 选择 **Scope（范围）**：
-   - **Personal** — 只有你能用
-   - **Organization** — 整个组织都能用
+4. Knowledge 默认属于当前组织，组织成员都可以使用
+   - 每位成员可以单独启用或禁用某条 Knowledge，不会影响其他人
+   - Enterprise 用户还可以创建跨组织共享的 Enterprise Knowledge
 
 5. 点击 **Save** 保存
 
@@ -113,12 +114,17 @@ Playbook 是可复用的任务模板。当你有一个经常重复的任务时�
 
 #### 第一步：进入 Playbooks 页面
 
-1. 在左侧边栏点击 **Playbooks**
+1. 进入 **Settings & Library** → **Playbooks**
 2. 点击 **Create Playbook** 按钮
 
 #### 第二步：编写 Playbook 内容
 
-一个 Playbook 包含 5 个部分：
+先写清楚两个最重要的内容：
+
+1. 最终要达到什么结果
+2. 为了达到结果，需要按什么步骤执行
+
+下面 5 个章节是官方推荐的可选结构，不要求每个 Playbook 全部包含：
 
 **1. Procedure（流程）**
 
@@ -193,26 +199,21 @@ Playbook 是可复用的任务模板。当你有一个经常重复的任务时�
 
 ### 如何使用 Playbook
 
-#### 方式 1：在 prompt 中引用
+#### 方式 1：从 Playbook 列表选择
 
-在创建 session 时，在 prompt 中引用 Playbook：
-
-```
-@Playbooks 快速PR
-
-请在 my-repo 仓库中添加一个用户统计 API。
-具体需求：...
-```
-
-`@Playbooks 快速PR` 会自动附加 Playbook 的内容到你的 prompt 中。
+创建 session 时，从 Team 或 Community Playbook 列表中选择一个。看到输入框附近出现蓝色 Playbook 标签，说明已经附加成功；开始前还可以临时编辑内容。
 
 #### 方式 2：使用宏（Macro）
 
 如果 Playbook 设置了宏（如 `!quick-pr`），可以直接写：
 
 ```
-@!quick-pr
+!quick-pr
 ```
+
+#### 方式 3：附加 `.devin.md` 文件
+
+你也可以把 Playbook 保存成 `任务名.devin.md`，新建 session 时拖入输入框。适合先在本地或仓库中 review，再交给 Devin 使用。
 
 ### Playbook 的最佳实践
 
@@ -279,3 +280,11 @@ Playbook 每次编辑保存都会自动创建版本。如果改坏了，可以�
 2. **Playbook** = 标准化任务流程，让重复任务一键执行
 3. 两者结合使用，Devin 就能像一个经验丰富的团队成员一样工作
 4. 持续积累和迭代是关键 — 每次 Devin 做得不好，就添加 Knowledge 或改进 Playbook
+
+---
+
+## 官方参考
+
+- Knowledge：https://docs.devin.ai/product-guides/knowledge
+- Creating Playbooks：https://docs.devin.ai/product-guides/creating-playbooks
+- Using Playbooks：https://docs.devin.ai/product-guides/using-playbooks
